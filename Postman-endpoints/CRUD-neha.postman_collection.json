@@ -1,0 +1,338 @@
+{
+	"info": {
+		"_postman_id": "4e9c55e7-6dfc-4dd9-8ad9-49f46b582a93",
+		"name": "CRUD-neha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "User 1",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "user1@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "user@1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "user1@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "user@1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTUzYWRlMTMyYzZkMjcxMzY5NTk2OCIsImlhdCI6MTY3OTExMzA2NiwiZXhwIjoxNjc5MTE2NjY2fQ.IsD1jaVesFv2BL60xD-X2ejtBv7ebVuiST7azPHtSOo",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Sweet fresh stawberry",
+							"type": "default"
+						},
+						{
+							"key": "type",
+							"value": "fruit",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "Sweet fresh stawberry on the wooden table",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "29.45",
+							"type": "default"
+						},
+						{
+							"key": "rating",
+							"value": "4",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update products",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTUzYWRlMTMyYzZkMjcxMzY5NTk2OCIsImlhdCI6MTY3OTExMzA2NiwiZXhwIjoxNjc5MTE2NjY2fQ.IsD1jaVesFv2BL60xD-X2ejtBv7ebVuiST7azPHtSOo",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Sweet fresh stawberry",
+							"type": "default"
+						},
+						{
+							"key": "type",
+							"value": "fruit",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "Sweet fresh stawberry on the wooden table",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "30.00",
+							"type": "default"
+						},
+						{
+							"key": "rating",
+							"value": "4",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/64153e20a501b0f8a6b12a20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"64153e20a501b0f8a6b12a20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTUzYWRlMTMyYzZkMjcxMzY5NTk2OCIsImlhdCI6MTY3OTExMzA2NiwiZXhwIjoxNjc5MTE2NjY2fQ.IsD1jaVesFv2BL60xD-X2ejtBv7ebVuiST7azPHtSOo",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/products?=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTUzYWRlMTMyYzZkMjcxMzY5NTk2OCIsImlhdCI6MTY3OTExMzA2NiwiZXhwIjoxNjc5MTE2NjY2fQ.IsD1jaVesFv2BL60xD-X2ejtBv7ebVuiST7azPHtSOo",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/products/64153e20a501b0f8a6b12a20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"64153e20a501b0f8a6b12a20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sort",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTUzYWRlMTMyYzZkMjcxMzY5NTk2OCIsImlhdCI6MTY3OTIxODE4OCwiZXhwIjoxNjc5MjIxNzg4fQ.YwTKbuMAToeBtMh0O8bbZNOL98rsHjqrfignL8dcE4s",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "-1",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/sort?sortBy=price&OrderBy=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "price"
+						},
+						{
+							"key": "OrderBy",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paginate",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTUzYWRlMTMyYzZkMjcxMzY5NTk2OCIsImlhdCI6MTY3OTIxODg2MSwiZXhwIjoxNjc5MjIyNDYxfQ.m0bpQoPAOhlcioaKUpHpQr4K8zeBnhohrE_ppsbfENc",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/products/paginate?skip=1&limit=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"paginate"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
